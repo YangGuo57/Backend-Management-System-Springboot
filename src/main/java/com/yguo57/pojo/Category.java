@@ -1,7 +1,9 @@
 package com.yguo57.pojo;
 
-import java.time.LocalDateTime;
+import lombok.Data;
 
+import java.time.LocalDateTime;
+@Data
 public class Category {
     private Integer id;
     private String categoryName;

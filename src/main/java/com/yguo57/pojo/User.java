@@ -1,9 +1,11 @@
 package com.yguo57.pojo;
 
 
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
+@Data
 public class User {
     private Integer id;
     private String username;
