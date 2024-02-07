@@ -2,11 +2,13 @@ package com.yguo57.pojo;
 
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class Result<T> {
     private Integer code;//Operation Status Code 0-Success 1-Failure
     private String message;
