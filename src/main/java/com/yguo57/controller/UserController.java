@@ -3,6 +3,7 @@ package com.yguo57.controller;
 import com.yguo57.pojo.Result;
 import com.yguo57.pojo.User;
 import com.yguo57.service.UserService;
+import com.yguo57.utils.Md5Util;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -28,5 +29,18 @@ public class UserController {
         } else {
             return Result.error("Please enter valid username and pwd");
         }
+    }
+
+    @PostMapping("/login")
+    public Result<String> login(@Pattern(regexp = "^\\S{5,16}$") String username, @Pattern(regexp = "^\\S{5,16}$") String password) {
+        User loginUser = userService.findByUserName(username);
+        if (loginUser == null) {
+            return Result.error("Wrong username");
+        }
+        if (Md5Util.getMD5String(password).equals(loginUser.getPassword())) {
+            return Result.success("jwt token");
+        }
+
+        return Result.error("Wrong pwd");
     }
 }
