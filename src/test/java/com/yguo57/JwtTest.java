@@ -17,7 +17,7 @@ public class JwtTest {
     public void testGen() {
         Map<String, Object> claims = new HashMap<>();
         claims.put("id", 1);
-        claims.put("username", "zhangsan");
+        claims.put("username", "michaelflin");
 
         // Generate GWT
         String token = JWT.create()
@@ -31,10 +31,9 @@ public class JwtTest {
     @Test
     public void testParse() {
         // Mimic user passing token
-        String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" +
-                ".eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6InpoYW5nc2FuIn0sImV4cCI6MTcwNzcyMzU1OX0" +
-                ".3whwma56vVkPmEUJQvi38lOEtmgX3wiJXBMVHCMvXnk";
-
+        String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9." +
+                "eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6Im1pY2hhZWxmbGluIn0sImV4cCI6MTcwNzczMDc5MX0." +
+                "roIvY3rL8LKtGNGlJP6zO2goQP2KfhEAPwQc3JvC6Pw";
         JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256("yguo57")).build();
         DecodedJWT decodedJWT = jwtVerifier.verify(token); //verify token
         Map<String, Claim> claims = decodedJWT.getClaims();

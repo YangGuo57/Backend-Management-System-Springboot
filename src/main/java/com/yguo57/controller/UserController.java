@@ -3,6 +3,7 @@ package com.yguo57.controller;
 import com.yguo57.pojo.Result;
 import com.yguo57.pojo.User;
 import com.yguo57.service.UserService;
+import com.yguo57.utils.JwtUtil;
 import com.yguo57.utils.Md5Util;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,9 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -38,9 +42,12 @@ public class UserController {
             return Result.error("Wrong username");
         }
         if (Md5Util.getMD5String(password).equals(loginUser.getPassword())) {
-            return Result.success("jwt token");
+            Map<String, Object> claims = new HashMap<>();
+            claims.put("id", loginUser.getId());
+            claims.put("username", loginUser.getUsername());
+            String token = JwtUtil.genToken(claims);
+            return Result.success(token);
         }
-
         return Result.error("Wrong pwd");
     }
 }
