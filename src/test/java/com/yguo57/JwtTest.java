@@ -1,7 +1,10 @@
 package com.yguo57;
 
 import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.interfaces.Claim;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import org.junit.Test;
 
 import java.util.Date;
@@ -23,5 +26,20 @@ public class JwtTest {
                 .sign(Algorithm.HMAC256("yguo57"));// set token
 
         System.out.println(token);
+    }
+
+    @Test
+    public void testParse() {
+        // Mimic user passing token
+        String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" +
+                ".eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6InpoYW5nc2FuIn0sImV4cCI6MTcwNzcyMzU1OX0" +
+                ".3whwma56vVkPmEUJQvi38lOEtmgX3wiJXBMVHCMvXnk";
+
+        JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256("yguo57")).build();
+        DecodedJWT decodedJWT = jwtVerifier.verify(token); //verify token
+        Map<String, Claim> claims = decodedJWT.getClaims();
+        System.out.println(claims.get("user"));
+
+        // Verification would fail id changing head, payload, or expired
     }
 }
