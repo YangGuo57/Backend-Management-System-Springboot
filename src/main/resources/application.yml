@@ -6,4 +6,8 @@ spring:
     password: 12345678
 
 server:
-  port: 3000
+  port: 8090
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #Enable automatic conversion of camel naming and underscore naming
