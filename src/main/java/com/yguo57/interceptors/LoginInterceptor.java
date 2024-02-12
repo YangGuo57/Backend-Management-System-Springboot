@@ -2,6 +2,7 @@ package com.yguo57.interceptors;
 
 import com.yguo57.pojo.Result;
 import com.yguo57.utils.JwtUtil;
+import com.yguo57.utils.ThreadLocalUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
@@ -18,6 +19,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         // verify user token (stored in the brower header)
         try {
             Map<String, Object> claims = JwtUtil.parseToken(token);
+            // store data into ThreadLocal
+            ThreadLocalUtil.set(claims);
             // allow through
             return true;
         } catch (Exception e) {
@@ -25,5 +28,11 @@ public class LoginInterceptor implements HandlerInterceptor {
             // deny through
             return false;
         }
+    }
+
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+        // clear data from ThreadLocal to prevent memory leak
+        ThreadLocalUtil.remove();
     }
 }

@@ -5,6 +5,7 @@ import com.yguo57.pojo.User;
 import com.yguo57.service.UserService;
 import com.yguo57.utils.JwtUtil;
 import com.yguo57.utils.Md5Util;
+import com.yguo57.utils.ThreadLocalUtil;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -50,9 +51,13 @@ public class UserController {
     }
 
     @GetMapping("/userInfo")
-    public Result<User> userInfo(@RequestHeader(name = "Authorization") String token) {
+    public Result<User> userInfo(/*@RequestHeader(name = "Authorization") String token*/) {
         // search user by name
-        Map<String, Object> map = JwtUtil.parseToken(token);
+        /*Map<String, Object> map = JwtUtil.parseToken(token);
+        String username = (String) map.get("username");*/
+
+        // get data from ThreadLocal
+        Map<String, Object> map = ThreadLocalUtil.get();
         String username = (String) map.get("username");
         User user = userService.findByUserName(username);
         return Result.success(user);
