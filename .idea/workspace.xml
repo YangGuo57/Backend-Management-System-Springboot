@@ -4,14 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b6b8f60-6fda-4d8a-86d3-f6a050fba8a0" name="Changes" comment="Setting environment" />
+    <list default="true" id="5a9b9258-65e8-4ddc-9d03-028a5e0d4d5e" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yguo57/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yguo57/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yguo57/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yguo57/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
@@ -23,38 +37,111 @@
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="08e7a79c-6ec8-41f5-bef0-81e23405d18f" />
-        <option name="url" value="https://github.com/YangGuo57/1510-midterm-practice.git" />
+        <option name="url" value="https://github.com/YangGuo57/Backend-Management-System-Springboot" />
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
+  &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2bTiFlDShheWO5wKCnyqVqcsksj" />
+  <component name="ProjectId" id="2cEoAs6K4qBQ08MTiyhhjDXdK4t" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/guoyang/Desktop/management-event",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/guoyang/Desktop/management-event/src/main/java/com/yguo57/utils&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/yguo57/pojo" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/yguo57/utils" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ManagementEventApplication">
+    <configuration name="JwtTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="management-event" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yguo57.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yguo57" />
+      <option name="MAIN_CLASS_NAME" value="com.yguo57.JwtTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JwtTest.testGen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="management-event" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yguo57.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yguo57" />
+      <option name="MAIN_CLASS_NAME" value="com.yguo57.JwtTest" />
+      <option name="METHOD_NAME" value="testGen" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadLocalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="management-event" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yguo57.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yguo57" />
+      <option name="MAIN_CLASS_NAME" value="com.yguo57.ThreadLocalTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadLocalTest.testThreadLocalSetAndGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="management-event" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yguo57.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yguo57" />
+      <option name="MAIN_CLASS_NAME" value="com.yguo57.ThreadLocalTest" />
+      <option name="METHOD_NAME" value="testThreadLocalSetAndGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ManagementEventApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="management-event" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yguo57.ManagementEventApplication" />
@@ -71,33 +158,115 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ManagementEventApplication" />
+        <item itemvalue="JUnit.ThreadLocalTest" />
+        <item itemvalue="JUnit.ThreadLocalTest.testThreadLocalSetAndGet" />
+        <item itemvalue="JUnit.JwtTest.testGen" />
+        <item itemvalue="JUnit.JwtTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="8b6b8f60-6fda-4d8a-86d3-f6a050fba8a0" name="Changes" comment="" />
-      <created>1706245367813</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1706245367813</updated>
-      <workItem from="1706245368851" duration="1043000" />
-      <workItem from="1706246581392" duration="152000" />
-    </task>
-    <task id="LOCAL-00001" summary="Setting environment">
+    <task id="LOCAL-00001" summary="Set JWT token">
       <option name="closed" value="true" />
-      <created>1706246689488</created>
+      <created>1707680391384</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1706246689488</updated>
+      <updated>1707680391384</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Set JWT token verification">
+      <option name="closed" value="true" />
+      <created>1707680797607</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707680797607</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Complete JWT">
+      <option name="closed" value="true" />
+      <created>1707681038520</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707681038520</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a9b9258-65e8-4ddc-9d03-028a5e0d4d5e" name="Changes" comment="Complete JWT" />
+      <created>1707685959688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707685959688</updated>
+      <workItem from="1707685961434" duration="2369000" />
+      <workItem from="1707776789878" duration="5395000" />
+      <workItem from="1707804661228" duration="628000" />
+      <workItem from="1707845312429" duration="651000" />
+      <workItem from="1707858905700" duration="1141000" />
+      <workItem from="1707885584215" duration="1211000" />
+      <workItem from="1707886808767" duration="1456000" />
+    </task>
+    <task id="LOCAL-00004" summary="Complete interceptor">
+      <option name="closed" value="true" />
+      <created>1707688286804</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707688286804</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Change port">
+      <option name="closed" value="true" />
+      <created>1707688295451</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707688295451</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Acquire user information">
+      <option name="closed" value="true" />
+      <created>1707779120983</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707779120983</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add ThreadLocal to acquire user information">
+      <option name="closed" value="true" />
+      <created>1707782181779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707782181779</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add update interface">
+      <option name="closed" value="true" />
+      <created>1707886497034</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707886497034</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update">
+      <option name="closed" value="true" />
+      <created>1707886764783</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707886764783</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Setting environment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setting environment" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Set JWT token" />
+    <MESSAGE value="Set JWT token verification" />
+    <MESSAGE value="Complete JWT" />
+    <MESSAGE value="Complete interceptor" />
+    <MESSAGE value="Change port" />
+    <MESSAGE value="Acquire user information" />
+    <MESSAGE value="Add ThreadLocal to acquire user information" />
+    <MESSAGE value="Add update interface" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
