@@ -152,3 +152,65 @@ public class MyController {
 ### @URL
 
 the `@URL` annotation checks that the `url` field is a valid HTTPS URL.
+
+## Initialization
+
+### **@SpringBootApplication**
+
+This annotation is used on the main application class to mark it as the entry point for Spring Boot.
+
+```java
+@SpringBootApplication
+public class MyApp {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApp.class, args);
+    }
+}
+```
+
+
+Sure! Below are code snippet examples for each category, demonstrating how to use these annotations in a Spring Boot application.
+
+### Initialization
+
+**@SpringBootApplication**
+
+This annotation is used on the main application class to mark it as the entry point for Spring Boot.
+
+```
+javaCopy code
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MyApp {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApp.class, args);
+    }
+}
+```
+
+## Dependency Injection
+
+### **@Autowired**
+
+
+
+```
+
+```
+
+## Data Representation
+
+### **@Data**
+
+
+
+## Constructor Generation
+
+### **@NoArgsConstructor**
+
+### **@AllArgsConstructor**
+
+
+
