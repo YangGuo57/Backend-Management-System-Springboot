@@ -122,5 +122,87 @@ public class RegistrationController {
 }
 ```
 
+### @PutMapping
+
+`@PutMapping` is a composite annotation that is used to handle HTTP PUT requests. It's a shorthand for `@RequestMapping(method = RequestMethod.PUT)`. It maps HTTP PUT requests onto specific handler methods.
+
+```java
+@RestController
+public class MyController {
+
+    @PutMapping("/items/{id}")
+    public Item updateItem(@RequestBody Item item, @PathVariable Long id) {
+        // Logic to update item
+        return item;
+    }
+}
+```
+
+### @PatchMapping
+
+`@PatchMapping` is a composite annotation that is used to handle HTTP PATCH requests. It's a shorthand for `@RequestMapping(method = RequestMethod.PATCH)`. This annotation maps HTTP PATCH requests to specific handler methods, typically used for partial updates to a resource.
+
+```java
+@RestController
+public class MyController {
+
+    @PatchMapping("/items/{id}")
+    public Item partialUpdateItem(@RequestBody Item item, @PathVariable Long id) {
+        // Logic for partial update of item
+        return item;
+    }
+}
+```
+
+### @RequestParam
+
+`@RequestParam` is used to extract query parameters from the query string of the HTTP request. It binds the value(s) of a query parameter to a method parameter in your handler method.
+
+```java
+@RestController
+public class MyController {
+
+    @GetMapping("/greeting")
+    public String greeting(@RequestParam(name = "name", defaultValue = "World") String name) {
+        return "Hello, " + name + "!";
+    }
+}
+```
+
+### @RequestBody
+
+`@RequestBody` is used to bind the body of the HTTP request to a method parameter. It's often used with POST or PUT requests to get request body content.
+
+```java
+@RestController
+public class MyController {
+
+    @PostMapping("/items")
+    public Item addItem(@RequestBody Item item) {
+        // Logic to add item
+        return item;
+    }
+}
+```
 
 
+
+### @Validated
+
+`@Validated` is used to enable validation on the annotated element. It can be applied at the class level or method parameter level. When used on method parameters (especially with `@RequestBody`), it triggers validation for the incoming object.
+
+```java
+@RestController
+public class MyController {
+
+    @PostMapping("/users")
+    public User addUser(@Valid @RequestBody User user) {
+        // Logic to add user, user object will be validated
+        return user;
+    }
+}
+```
+
+### @URL
+
+the `@URL` annotation checks that the `url` field is a valid HTTPS URL.
