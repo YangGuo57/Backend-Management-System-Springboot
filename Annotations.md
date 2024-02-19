@@ -2,7 +2,7 @@
 
  The Model-View-Controller (MVC) is a **design pattern** widely used in the development of user interfaces. It divides an application into three interconnected components:
 
-![Model1](/Users/guoyang/Desktop/management-event/MVC.jpg)
+![Model1](MVC.jpg)
 
 - **Model**: The Model represents the application's dynamic data structure, independent of the user interface. It directly manages the data, logic, and rules of the application.
 
@@ -10,7 +10,7 @@
 
 - **Controller**: The Controller acts as an intermediary between the Model and the View. It listens to the user input from the View, processes the input (often involving interactions with the Model), and returns the output display to the View.
 
-![maxresdefault](/Users/guoyang/Desktop/management-event/SpringBoot.png)
+![maxresdefault](SpringBoot.png)
 
 Spring Boot is an extension of the Spring framework that simplifies the initial setup and development of new Spring applications. It follows the MVC architecture closely and provides an easy way to create stand-alone, production-grade Spring-based applications that you can "just run."
 
