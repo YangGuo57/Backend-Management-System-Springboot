@@ -4,6 +4,7 @@ import com.yguo57.pojo.Category;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,4 +21,8 @@ public interface CategoryMapper {
 
     @Select("SELECT * FROM category WHERE id = #{id}")
     Category findById(Integer id);
+
+    @Update("UPDATE category SET category_name=#{categoryName},category_alias=#{categoryAlias},update_time=#{updateTime} " +
+            "WHERE id = #{id}")
+    void update(Category category);
 }

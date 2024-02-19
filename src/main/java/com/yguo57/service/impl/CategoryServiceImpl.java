@@ -25,7 +25,6 @@ public class CategoryServiceImpl implements CategoryService {
         Map<String, Object> map = ThreadLocalUtil.get();
         Integer userId = (Integer) map.get("id");
         category.setCreateUser(userId);
-
         categoryMapper.add(category);
     }
 
@@ -40,5 +39,11 @@ public class CategoryServiceImpl implements CategoryService {
     public Category findById(Integer id) {
         Category c = categoryMapper.findById(id);
         return c;
+    }
+
+    @Override
+    public void update(Category category) {
+        category.setUpdateTime(LocalDateTime.now());
+        categoryMapper.update(category);
     }
 }
