@@ -10,9 +10,27 @@
 
 - **Controller**: The Controller acts as an intermediary between the Model and the View. It listens to the user input from the View, processes the input (often involving interactions with the Model), and returns the output display to the View.
 
+
+
+## Spring Boot
+
 ![maxresdefault](SpringBoot.png)
 
 Spring Boot is an extension of the Spring framework that simplifies the initial setup and development of new Spring applications. It follows the MVC architecture closely and provides an easy way to create stand-alone, production-grade Spring-based applications that you can "just run."
+
+- **Model**: It is still the layer responsible for handling the business logic and data access. Spring Boot uses Spring’s support for data access technologies like JDBC, JPA, Hibernate to interact with the database. Your domain models (POJOs) are typically annotated with JPA annotations to define the object-relational mapping.
+
+- **View**: In a Spring Boot web application, the View is what is returned to the user's browser as a result of a web request. Spring Boot supports Thymeleaf, FreeMarker, JSPs, and other view technologies. However, in the case of RESTful applications, the view is usually JSON or XML formatted data returned to the client.
+
+- **Controller**: Spring Boot uses Spring MVC for web layer - controllers. You define controllers in Spring Boot exactly as you would in a traditional Spring MVC application, using the `@Controller` or `@RestController` annotations. Controllers in Spring Boot handle user requests, process them (with the help of Services and Repositories), and return a response.
+
+- **Service Layer**: While not explicitly part of MVC, the service layer is where business logic typically resides. Spring Boot doesn't change this; you would still have services annotated with `@Service`, which contain business logic and call methods in the repository layer.
+
+- **Repository Layer**: This is where data access logic resides. You can use Spring Data JPA repositories (interfaces extending `JpaRepository`) to define data access methods. Spring Boot makes it easier to configure these repositories with minimal configuration.
+
+- **Configuration**: Spring Boot relies on auto-configuration and starters to automatically configure your application based on the dependencies you have added. This replaces much of the XML configuration used in traditional Spring applications with a convention-over-configuration approach.
+
+- **Embedded Servers**: Unlike traditional Spring MVC applications that need an external server to deploy and run, Spring Boot comes with embedded servers like Tomcat, Jetty, or Undertow, making it easy to develop and test web applications.
 
 # Annotations
 
