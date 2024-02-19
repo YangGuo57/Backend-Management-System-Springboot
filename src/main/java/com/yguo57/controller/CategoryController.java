@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.PublicKey;
 import java.util.List;
 
 @RestController
@@ -36,6 +37,12 @@ public class CategoryController {
     @PutMapping
     public Result update(@RequestBody @Validated(Category.Update.class) Category category) {
         categoryService.update(category);
+        return Result.success();
+    }
+
+    @DeleteMapping
+    public Result delete(Integer id) {
+        categoryService.deleteById(id);
         return Result.success();
     }
 }
