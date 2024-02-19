@@ -1,3 +1,19 @@
+# MVC Framework
+
+ The Model-View-Controller (MVC) is a **design pattern** widely used in the development of user interfaces. It divides an application into three interconnected components:
+
+![Model1](/Users/guoyang/Desktop/Model1.png)
+
+- **Model**: The Model represents the application's dynamic data structure, independent of the user interface. It directly manages the data, logic, and rules of the application.
+
+- **View**: The View represents the visual representation of the Model. It is responsible for rendering the Model data to the user and provides the capability for user interaction.
+
+- **Controller**: The Controller acts as an intermediary between the Model and the View. It listens to the user input from the View, processes the input (often involving interactions with the Model), and returns the output display to the View.
+
+![maxresdefault](/Users/guoyang/Desktop/maxresdefault.jpg)
+
+Spring Boot is an extension of the Spring framework that simplifies the initial setup and development of new Spring applications. It follows the MVC architecture closely and provides an easy way to create stand-alone, production-grade Spring-based applications that you can "just run."
+
 # Annotations
 
 ## Controller
@@ -262,8 +278,6 @@ public class Example {
 
 In the above example, the `@Data` annotation automatically generates `getName()`, `setName()`, `getAge()`, and `setAge()` methods, as well as `equals()`, `hashCode()`, and `toString()` methods, without the need for manual coding.
 
-
-
 ## **Data Validation** 
 
 ### @Validated
@@ -304,6 +318,80 @@ public class User {
     @JsonFormat(pattern = "yyyy-mm-dd HH:mm:ss")
     private LocalDateTime updateTime;
 ```
+
+## MyBatis
+
+### @Mapper
+
+The `@Mapper` annotation in MyBatis is used to indicate that an interface is a Mapper **INTERFACE**. This interface is responsible for defining methods that **perform database operations**, such as queries, inserts, updates, and deletes. By marking an interface with `@Mapper`, MyBatis automatically generates the implementation at runtime, allowing you to directly use these interfaces in your service layer without needing to provide an implementation.
+
+1. **Define a User Class**
+
+First, define a POJO (Plain Old Java Object) to represent the data structure:
+
+```java
+public class User {
+    private Integer id;
+    private String username;
+    private String password;
+}
+```
+
+2. **Create a Mapper Interface**
+
+Next, create an interface for database operations and annotate it with `@Mapper`:
+
+```java
+
+@Mapper
+public interface UserMapper {
+    @Select("SELECT * FROM user WHERE username = #{username}")
+    User findByUserName(String username);
+
+    @Insert("INSERT INTO user(username, password) VALUES (#{username}, #{password})")
+    void add(User user);
+}
+```
+
+3. **Configure MyBatis to Recognize the Mapper**
+
+Ensure MyBatis is configured to recognize the mapper, typically by specifying the mapper in the MyBatis configuration file or scanning the package containing the mapper interfaces.
+
+4. **Use the Mapper in Your Application**
+
+Finally, you can autowire the mapper interface in your service class and use it to interact with the database:
+
+```java
+@Service
+public class UserService {
+    @Autowired
+    private UserMapper userMapper;
+
+    public User getUserByUsername(String username) {
+        return userMapper.findByUserName(username);
+    }
+
+    public void createUser(User user) {
+        userMapper.add(user);
+    }
+}
+```
+
+### **@Select**
+
+ Used to mark a method for executing a SELECT query. The annotation value is the SQL query to be executed.
+
+### **@Insert**
+
+ Marks a method for executing an INSERT query. The annotation value is the SQL query for inserting records.
+
+### **@Update**
+
+ Used to mark a method for executing an UPDATE query. The annotation value is the SQL statement for updating records.
+
+### **@Delete**
+
+ Marks a method for executing a DELETE query. The annotation value is the SQL statement for deleting records.
 
 ## Constructor Generation
 
