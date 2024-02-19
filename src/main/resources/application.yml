@@ -6,7 +6,7 @@ spring:
     password: 12345678
 
 server:
-  port: 8090
+  port: 8080
 
 mybatis:
   configuration:
