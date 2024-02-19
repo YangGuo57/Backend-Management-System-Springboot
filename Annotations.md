@@ -182,7 +182,7 @@ When you mark a field, constructor, or setter method with `@Autowired`, Spring l
 
 The `@Service` annotation is used to mark a class as a service provider in your application. It's a specialization of the `@Component` annotation, signaling to the Spring framework that the annotated class should be treated as a service layer bean. These classes typically contain business logic, operations, or calls to the database.
 
-Classes annotated with `@Service` are automatically detected by Spring (through classpath scanning) and are instantiated as beans in the Spring application context. This makes them available for dependency injection where needed.
+Classes annotated with `@Service` are automatically detected by Spring (through classpath scanning) and are **instantiated as beans** in the Spring application context. This makes them available for dependency injection where needed.
 
 **Step 1: Define the `UserService` Interface**
 
@@ -244,11 +244,66 @@ The key point is that `@Service` is annotated on the implementation class (i.e.,
 
 When you use the `@Autowired` annotation to refer to the `UserService` interface in `UserController`, you are telling Spring, "Please provide me with an instance of an implementation of this interface." Since `UserServiceImpl` is the only implementation of `UserService` and is annotated with `@Service` (i.e., it is already a bean), the Spring container will automatically inject an instance of `UserServiceImpl` into the `UserService` reference in `UserController`.
 
-## Data Representation
+## Simplification Annotations
 
 ### **@Data**
 
+The `@Data` annotation provided by **Lombok** is a simplification annotation used to generate common Java class methods automatically. It automatically generates `getter` and `setter` methods for each field in the class, along with `equals()`, `hashCode()`, and `toString()` methods. By using the `@Data` annotation, the amount of boilerplate code can be significantly reduced, enhancing the readability and maintainability of the code.
 
+```java
+import lombok.Data;
+
+@Data
+public class Example {
+    private String name;
+    private int age;
+}
+```
+
+In the above example, the `@Data` annotation automatically generates `getName()`, `setName()`, `getAge()`, and `setAge()` methods, as well as `equals()`, `hashCode()`, and `toString()` methods, without the need for manual coding.
+
+
+
+## **Data Validation** 
+
+### @Validated
+
+**Description**: The `@Validated` annotation is used in Spring applications to enable method-level parameter validation. It works in conjunction with Bean Validation annotations to validate method parameters based on specified constraints.
+
+```java
+@RestController
+@Validated
+public class UserController {
+
+    @PostMapping("/users")
+    public ResponseEntity<String> createUser(
+            @RequestBody @Validated User user) {
+        return ResponseEntity.ok("User created successfully");
+    }
+    
+}
+
+public class User {
+    @NotNull
+    @Size(min = 2, max = 50)
+    private String username;
+    
+    @NotNull
+    @Size(min = 6, max = 20)
+    private String password;
+    
+}
+
+```
+
+### @JsonFormat
+
+**Description**: The `@JsonFormat` annotation is **used at the field level** in a class to specify how dates, times, or numbers should be formatted when the class is serialized into JSON.
+
+```java
+    @JsonFormat(pattern = "yyyy-mm-dd HH:mm:ss")
+    private LocalDateTime updateTime;
+```
 
 ## Constructor Generation
 
