@@ -2,6 +2,7 @@ package com.yguo57.controller;
 
 
 import com.yguo57.pojo.Article;
+import com.yguo57.pojo.PageBean;
 import com.yguo57.pojo.Result;
 import com.yguo57.service.ArticleService;
 import com.yguo57.utils.JwtUtil;
@@ -36,6 +37,17 @@ public class ArticleController {
     public Result add(@RequestBody @Validated Article article) {
         articleService.add(article);
         return Result.success();
+    }
+
+    @GetMapping
+    public Result<PageBean<Article>> list(
+            Integer pageNum,
+            Integer pageSize,
+            @RequestParam(required = false) Integer categoryId,
+            @RequestParam(required = false) String state
+    ) {
+        PageBean<Article> pb = articleService.list(pageNum, pageSize, categoryId, state);
+        return Result.success(pb);
     }
 
 }
