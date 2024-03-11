@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a9b9258-65e8-4ddc-9d03-028a5e0d4d5e" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5a9b9258-65e8-4ddc-9d03-028a5e0d4d5e" name="Changes" comment="Complete pagination interface">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yguo57/controller/FileUploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yguo57/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yguo57/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yguo57/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yguo57/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yguo57/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -27,12 +27,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "YangGuo57"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;YangGuo57&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -66,7 +66,8 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/guoyang/Desktop/management-event/src/main/java/com/yguo57/utils&quot;
+    &quot;last_opened_file_path&quot;: &quot;/Users/guoyang/Desktop/management-event/src/main/resources/com/yguo57/mapper&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -76,11 +77,17 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/yguo57/mapper" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/yguo57/pojo" />
       <recent name="$PROJECT_DIR$/src/main/java/com/yguo57/utils" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ManagementEventApplication">
-    <configuration name="JwtTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Demo">
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yguo57.Demo" />
       <module name="management-event" />
       <extension name="coverage">
         <pattern>
@@ -88,9 +95,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.yguo57" />
-      <option name="MAIN_CLASS_NAME" value="com.yguo57.JwtTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Demo" />
         <item itemvalue="Spring Boot.ManagementEventApplication" />
         <item itemvalue="JUnit.ThreadLocalTest" />
         <item itemvalue="JUnit.ThreadLocalTest.testThreadLocalSetAndGet" />
         <item itemvalue="JUnit.JwtTest.testGen" />
-        <item itemvalue="JUnit.JwtTest" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +207,24 @@
       <workItem from="1707845312429" duration="651000" />
       <workItem from="1707858905700" duration="1141000" />
       <workItem from="1707885584215" duration="1211000" />
-      <workItem from="1707886808767" duration="1456000" />
+      <workItem from="1707886808767" duration="1640000" />
+      <workItem from="1707933390455" duration="1221000" />
+      <workItem from="1707963391004" duration="5389000" />
+      <workItem from="1708021410981" duration="3735000" />
+      <workItem from="1708108582374" duration="1098000" />
+      <workItem from="1708110495664" duration="3537000" />
+      <workItem from="1708325366165" duration="9614000" />
+      <workItem from="1708335038949" duration="22000" />
+      <workItem from="1708367297210" duration="12010000" />
+      <workItem from="1708462247911" duration="286000" />
+      <workItem from="1708463719083" duration="305000" />
+      <workItem from="1708492402375" duration="19000" />
+      <workItem from="1709616114313" duration="17000" />
+      <workItem from="1709616279884" duration="216000" />
+      <workItem from="1709701459628" duration="5768000" />
+      <workItem from="1709883795381" duration="75000" />
+      <workItem from="1710128240814" duration="934000" />
+      <workItem from="1710187019107" duration="2721000" />
     </task>
     <task id="LOCAL-00004" summary="Complete interceptor">
       <option name="closed" value="true" />
@@ -253,20 +274,227 @@
       <option name="project" value="LOCAL" />
       <updated>1707886764783</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add input validation">
+      <option name="closed" value="true" />
+      <created>1707889517207</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707889517207</updated>
+    </task>
+    <task id="LOCAL-00011" summary=".">
+      <option name="closed" value="true" />
+      <created>1707889574598</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707889574598</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update user icon iterface">
+      <option name="closed" value="true" />
+      <created>1707966295825</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707966295825</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Complete updating password interface">
+      <option name="closed" value="true" />
+      <created>1707968169292</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707968169292</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add Global Exception Handler">
+      <option name="closed" value="true" />
+      <created>1707968818315</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707968818315</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update README.md">
+      <option name="closed" value="true" />
+      <created>1708022152494</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022152494</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactor README.md">
+      <option name="closed" value="true" />
+      <created>1708022438178</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022438178</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Refactor README.md">
+      <option name="closed" value="true" />
+      <created>1708023267197</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708023267197</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add">
+      <option name="closed" value="true" />
+      <created>1708113415118</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1708113415118</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Complete add new article interface">
+      <option name="closed" value="true" />
+      <created>1708328048025</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708328048025</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Complete get new article interface">
+      <option name="closed" value="true" />
+      <created>1708329677081</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1708329677081</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Complete get article category interface">
+      <option name="closed" value="true" />
+      <created>1708330329861</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1708330329861</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Complete update article category interface">
+      <option name="closed" value="true" />
+      <created>1708331137046</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1708331137046</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add">
+      <option name="closed" value="true" />
+      <created>1708331346797</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708331346797</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Group Validation">
+      <option name="closed" value="true" />
+      <created>1708331996548</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708331996548</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Add delete article interface">
+      <option name="closed" value="true" />
+      <created>1708332951723</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708332951723</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Complete publish new article interface">
+      <option name="closed" value="true" />
+      <created>1708335050773</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708335050773</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fix syntax">
+      <option name="closed" value="true" />
+      <created>1708367432384</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708367432384</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add">
+      <option name="closed" value="true" />
+      <created>1708372554783</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708372554783</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add">
+      <option name="closed" value="true" />
+      <created>1708372688013</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708372688013</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Fix path">
+      <option name="closed" value="true" />
+      <created>1708372762924</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1708372762924</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Update Annotations.md">
+      <option name="closed" value="true" />
+      <created>1708373152327</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1708373152327</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Add @State customized validation">
+      <option name="closed" value="true" />
+      <created>1708379498780</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1708379498780</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Complete pagination interface">
+      <option name="closed" value="true" />
+      <created>1709704737933</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1709704737934</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update README.md" />
-    <MESSAGE value="Set JWT token" />
-    <MESSAGE value="Set JWT token verification" />
-    <MESSAGE value="Complete JWT" />
-    <MESSAGE value="Complete interceptor" />
     <MESSAGE value="Change port" />
     <MESSAGE value="Acquire user information" />
     <MESSAGE value="Add ThreadLocal to acquire user information" />
     <MESSAGE value="Add update interface" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Add input validation" />
+    <MESSAGE value="." />
+    <MESSAGE value="Update user icon iterface" />
+    <MESSAGE value="Complete updating password interface" />
+    <MESSAGE value="Add Global Exception Handler" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Refactor README.md" />
+    <MESSAGE value="Complete add new article interface" />
+    <MESSAGE value="Complete get new article interface" />
+    <MESSAGE value="Complete get article category interface" />
+    <MESSAGE value="Complete update article category interface" />
+    <MESSAGE value="Group Validation" />
+    <MESSAGE value="Add delete article interface" />
+    <MESSAGE value="Complete publish new article interface" />
+    <MESSAGE value="Fix syntax" />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Fix path" />
+    <MESSAGE value="Update Annotations.md" />
+    <MESSAGE value="Add @State customized validation" />
+    <MESSAGE value="Complete pagination interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete pagination interface" />
   </component>
 </project>
